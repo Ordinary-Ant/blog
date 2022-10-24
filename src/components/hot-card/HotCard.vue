@@ -1,0 +1,22 @@
+<template>
+  <section>
+    <slot></slot>
+  </section>
+</template>
+
+<script setup lang="ts">
+import PageHeader from "../page-header/PageHeader.vue";
+const props = defineProps({
+  page_type: {
+    type: String,
+    default: "master_page",
+  },
+});
+</script>
+
+<style lang="postcss" scoped>
+section {
+  padding: 0 120px;
+  margin-top: 24px;
+}
+</style>
