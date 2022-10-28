@@ -15,10 +15,9 @@ const props = defineProps({
 })
 </script>
       
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 section {
   padding: 0 120px;
-  margin-top: 24px;
 }
 </style>
       

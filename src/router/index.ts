@@ -10,32 +10,32 @@ const Jottings = () => import('@view/jottings/index.vue')
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
+    name: '主页',
     component: Home
   },
   {
     path: '/comments',
-    name: 'comments',
+    name: '留言',
     component: Comments
   },
   {
     path: '/article',
-    name: 'article',
+    name: '文章',
     component: Article
   },
   {
     path: '/creation',
-    name: 'creation',
+    name: '作品',
     component: Creation
   },
   {
     path: '/history',
-    name: 'history',
+    name: '记忆',
     component: History
   },
   {
     path: '/jottings',
-    name: 'jottings',
+    name: '闪念',
     component: Jottings
   }
 ]
