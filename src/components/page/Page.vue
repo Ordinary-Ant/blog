@@ -18,6 +18,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 section {
   padding: 0 120px;
+  margin-top: 102px;
 }
 </style>
       

@@ -1,17 +1,15 @@
 <template>
   <section>
     <div class="card-head">
-      <div
-        class="card-head_top"
-        @mouseenter="handleChange(false)"
-        @mouseleave="handleChange(true)"
-      >
-        <span class="title" v-show="active">{{ props.title }}</span>
-        <span class="more" v-show="!active" @click="handleGoMore">更多</span>
+      <div class="card-head_top">
+        <span class="title">{{ props.title }}</span>
+        <span class="more" @click="handleGoMore">更多</span>
       </div>
-      <slot name="card-head-after"> </slot>
+      <slot name="card-head-after"></slot>
     </div>
-    <slot></slot>
+    <div :style="`padding: ${padding}`">
+      <slot></slot>
+    </div>
   </section>
 </template>
 <script lang="ts" setup>
@@ -20,6 +18,10 @@ import { computed, ref } from "vue";
 
 const props = defineProps({
   title: String,
+  padding: {
+    type: String,
+    default: ''
+  }
 });
 
 const active = ref<Boolean>(true);
@@ -37,22 +39,45 @@ const handleGoMore = () => {
 <style lang="scss" scoped>
 section {
   max-width: 1000px;
-  margin: 24px auto;
+  margin: 36px auto;
+  box-sizing: border-box;
   .card-head {
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     &_top {
-      transition: all 1s;
-      span {
-        display: inline-block;
-        width: 200px;
-        text-align: center;
+      height: 28px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        .title {
+          transform: translateX(-15px);
+          border-bottom: 2px solid #ccc;
+        }
+        .more {
+          opacity: 1;
+          transform: translateX(30px);
+        }
       }
-    }
-    .title {
+      .title {
+        transform: translateX(15px);
+        font-size: 20px;
+        text-indent: 2px;
+        padding-bottom: 5px;
+        transition: all .5s;
+        border-bottom: 2px solid transparent;
+      }
+      .more {
+        opacity: 0;
+        color: #ccc;
+        cursor: pointer;
+        transform: translateX(0);
+        transition: all .8s;
+      }
     }
   }
 }
