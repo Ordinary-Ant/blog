@@ -26,6 +26,7 @@ declare module '@vue/runtime-core' {
     Page: typeof import('./src/components/page/Page.vue')['default']
     PageAside: typeof import('./src/components/page-aside/PageAside.vue')['default']
     PageHeader: typeof import('./src/components/page-header/PageHeader.vue')['default']
+    PageSearch: typeof import('./src/components/page-search/PageSearch.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     User: typeof import('./src/components/header/components/User.vue')['default']

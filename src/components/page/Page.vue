@@ -1,12 +1,14 @@
 <template>
   <PageHeader v-show="page_type == 'master_page'"/>
   <section>
+    <PageSearch />
     <slot></slot>
   </section>
 </template>
       
 <script setup lang="ts">
 import PageHeader from "../page-header/PageHeader.vue";
+import PageSearch from '../page-search/PageSearch.vue'
 const props = defineProps({
   page_type: {
     type: String,

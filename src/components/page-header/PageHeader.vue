@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="page-header-container">
+    
+  </div>
 </template>
     
 <script setup lang="ts">
