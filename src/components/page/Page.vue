@@ -1,7 +1,7 @@
 <template>
   <PageHeader v-show="page_type == 'master_page'"/>
   <section>
-    <PageSearch />
+    <PageSearch/>
     <slot></slot>
   </section>
 </template>
