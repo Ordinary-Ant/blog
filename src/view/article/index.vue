@@ -1,5 +1,5 @@
 <template>
-  <Page> 123456 </Page>
+  <Page></Page>
 </template>
 
 <script setup lang="ts">

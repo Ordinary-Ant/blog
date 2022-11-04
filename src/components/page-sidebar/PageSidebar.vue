@@ -1,13 +1,12 @@
 <template>
-  <div class="logo" @click="$router.push('/')">123</div>
+  <div class="page-sidebar-container">
+    
+  </div>
 </template>
-  
+
 <script setup lang="ts">
 </script>
-  
+
 <style lang="scss" scoped>
-.logo {
-  flex: 1;
-}
+
 </style>
-  

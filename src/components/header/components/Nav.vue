@@ -16,13 +16,13 @@ const { navTo } = useNav();
 
 <style lang="scss" scoped>
 .nav-list {
+  flex: 2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .nav-item {
-    padding: 12px 18px;
-    margin: 0 12px;
+    margin: 12px 0;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.5s;

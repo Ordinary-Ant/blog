@@ -39,7 +39,7 @@ const handleGoMore = () => {
 <style lang="scss" scoped>
 section {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 20px auto;
   box-sizing: border-box;
   .card-head {
     margin-bottom: 20px;

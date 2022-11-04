@@ -1,6 +1,6 @@
 <template>
   <header>
-    <section>
+    <section class="header-container">
       <Logo />
       <Nav />
       <User />
@@ -17,20 +17,21 @@ import User from './components/User.vue';
 
 <style lang="scss" scoped>
 header{
-  height: 64px;
-  background: transparent;
-  box-shadow: 0 2px 4px #00000014;
+  width: 18vw;
+  height: 100%;
+  background: #fff;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(17,24,39,.1);
+  border-right: 1px dotted #ddd;
   position: fixed;
-  width: 100vw;
-  top: 0;
-  background-color: #fff;
-  z-index: 999;
-  section {
+  left: 0;
+  z-index: 998;
+  overflow: auto;
+  transition: all .5s;
+  .header-container {
     height: 100%;
-    padding: 0 48px;
+    padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }

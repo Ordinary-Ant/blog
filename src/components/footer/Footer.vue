@@ -20,9 +20,7 @@
 
 <style lang="scss" scoped>
 #footer {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-color: rgba(17, 24, 39, 0.1);
+  border-top: 1px dotted #ddd;
   line-height: 26px;
   letter-spacing: 1px;
   font-size: 12px;

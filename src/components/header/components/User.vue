@@ -1,5 +1,6 @@
 <template>
   <div class="avator" v-if="user_login_type">
+    <div @click="handleChangeStatus" class="header-option">搜</div>
     <el-popover 
       popper-class="avator_pop"
       placement="bottom-end" 
@@ -30,13 +31,20 @@
 <script setup lang="ts">
 import squareUrl from "@assets/vue.svg";
 import { ref } from "vue";
-const user_login_type = true;
+import { useUserStore } from "@/store/user";
 
+const user_login_type = true;
 const user_name = ref<string>('子舟')
+
+const user = useUserStore()
+const handleChangeStatus = () :void => {
+  user.setShowSearch(!user.show_search)
+}
 </script>
 
 <style lang="scss" scoped>
 .avator {
+  flex: 1;
   display: flex;
   align-items: center;
   :deep() .avator_pop {
@@ -58,6 +66,9 @@ const user_name = ref<string>('子舟')
     li {
       padding: 5px 5px 5px 20px;
     }
+  }
+  .header-option {
+
   }
 }
 </style>
