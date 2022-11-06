@@ -1,9 +1,9 @@
 <template>
   <div class="avator" v-if="user_login_type">
-    <div @click="handleChangeStatus" class="header-option">搜</div>
+    <div @click="handleChangeStatus" class="header-option">搜索本站</div>
     <el-popover 
       popper-class="avator_pop"
-      placement="bottom-end" 
+      placement="bottom" 
       trigger="hover" 
       width="220px" 
       :offset="5"
@@ -44,9 +44,14 @@ const handleChangeStatus = () :void => {
 
 <style lang="scss" scoped>
 .avator {
+  margin-top: 48px;
   flex: 1;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  .header-option {
+    margin-bottom: 12px;
+  }
   :deep() .avator_pop {
     padding: 0 !important;
   }

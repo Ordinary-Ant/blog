@@ -11,32 +11,38 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: '主页',
-    component: Home
+    component: Home,
+    meta: { es_name: 'Home' }
   },
   {
     path: '/comments',
     name: '留言',
-    component: Comments
+    component: Comments,
+    meta: { es_name: 'Message' }
   },
   {
     path: '/article',
     name: '文章',
-    component: Article
+    component: Article,
+    meta: { es_name: 'Article' }
   },
   {
     path: '/creation',
     name: '作品',
-    component: Creation
+    component: Creation,
+    meta: { es_name: 'Creation' }
   },
   {
     path: '/history',
     name: '记忆',
-    component: History
+    component: History,
+    meta: { es_name: 'History' }
   },
   {
     path: '/jottings',
     name: '闪念',
-    component: Jottings
+    component: Jottings,
+    meta: { es_name: 'Jottings' }
   }
 ]
 

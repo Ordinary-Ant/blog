@@ -9,7 +9,7 @@
         京ICP备17025554号-2</a
       >
     </p>
-    <p class="small">
+    <p class="small mb-2">
       Powered by <a href="http://typecho.org" target="_blank">Typecho</a> ※
       Theme is <a href="https://blog.zwying.com" target="_blank">Cuteen</a>
     </p>

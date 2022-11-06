@@ -13,11 +13,11 @@
 <style lang="scss" scoped>
 .master-container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   .pg {
     position: fixed;
     z-index: 999;
-    border: calc(1vw / 2) solid skyblue;
+    border: 6px solid skyblue;
     background: skyblue;
     pointer-events: none;
     &-top {

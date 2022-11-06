@@ -1,7 +1,7 @@
 <template>
   <div class="page-header-container">
     <div class="title">
-      子舟
+      Blog.{{ $route.meta.es_name }}
       <span class="interval"></span>
       {{ $route.name }}
     </div>

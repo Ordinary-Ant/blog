@@ -1,11 +1,10 @@
 <template>
   <section>
-    <div class="card-head">
+    <div class="card-head" v-if="has_title">
       <div class="card-head_top">
         <span class="title">{{ props.title }}</span>
-        <span class="more" @click="handleGoMore">更多</span>
+        <span v-if="more" class="more" @click="handleGoMore">更多</span>
       </div>
-      <slot name="card-head-after"></slot>
     </div>
     <div :style="`padding: ${padding}`">
       <slot></slot>
@@ -18,6 +17,14 @@ import { computed, ref } from "vue";
 
 const props = defineProps({
   title: String,
+  more: {
+    type: Boolean,
+    default: true
+  },
+  has_title: {
+    type: Boolean,
+    default: true
+  },
   padding: {
     type: String,
     default: ''
@@ -38,25 +45,25 @@ const handleGoMore = () => {
 
 <style lang="scss" scoped>
 section {
-  max-width: 1000px;
-  margin: 20px auto;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
   box-sizing: border-box;
+  border-bottom: 1px dotted #ddd;
+  &:last-child {
+    border-bottom: none;
+  }
   .card-head {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    color: #fff;
     &_top {
       height: 28px;
-      width: 300px;
       display: flex;
       align-items: center;
-      justify-content: center;
       &:hover {
         .title {
-          transform: translateX(-15px);
-          border-bottom: 2px solid #ccc;
+          background: blue;
         }
         .more {
           opacity: 1;
@@ -64,14 +71,15 @@ section {
         }
       }
       .title {
-        transform: translateX(15px);
-        font-size: 20px;
+        font-size: 16px;
         text-indent: 2px;
-        padding-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
         transition: all .5s;
-        border-bottom: 2px solid transparent;
+        background: skyblue;
       }
       .more {
+        font-size: 14px;
         opacity: 0;
         color: #ccc;
         cursor: pointer;

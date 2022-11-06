@@ -2,8 +2,8 @@
   <header>
     <section class="header-container">
       <Logo />
-      <Nav />
       <User />
+      <Nav />
     </section>
   </header>
 </template>
@@ -17,7 +17,7 @@ import User from './components/User.vue';
 
 <style lang="scss" scoped>
 header{
-  width: 18vw;
+  width: 15vw;
   height: 100%;
   background: #fff;
   box-sizing: border-box;
@@ -25,15 +25,18 @@ header{
   position: fixed;
   left: 0;
   z-index: 998;
-  overflow: auto;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
   transition: all .5s;
+  margin: 12px 0 12px 12px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .header-container {
     height: 100%;
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
   }
 }
 </style>

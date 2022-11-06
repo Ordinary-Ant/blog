@@ -7,7 +7,7 @@
   
 <style lang="scss" scoped>
 .logo {
-  flex: 1;
+  margin-top: 48px;
 }
 </style>
   

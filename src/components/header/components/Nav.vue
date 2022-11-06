@@ -16,21 +16,20 @@ const { navTo } = useNav();
 
 <style lang="scss" scoped>
 .nav-list {
-  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
   .nav-item {
     margin: 12px 0;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.5s;
-
+    padding: 10px 15px;
     &:hover {
       background: black;
     }
-
     &.active {
       background: black;
     }

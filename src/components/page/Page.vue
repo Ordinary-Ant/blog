@@ -31,7 +31,7 @@ const curr_page_type = computed(() => {
       
 <style lang="scss" scoped>
 section {
-  padding: 60px 60px 60px 0;
+  padding: 60px 60px 0 0;
   .page-main {
     padding-left: 60px;
   }
