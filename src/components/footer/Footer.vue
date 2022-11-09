@@ -20,7 +20,6 @@
 
 <style lang="scss" scoped>
 #footer {
-  border-top: 1px dotted #ddd;
   line-height: 26px;
   letter-spacing: 1px;
   font-size: 12px;
