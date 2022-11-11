@@ -12,7 +12,7 @@
             <div class="content">
               <a href="" class="title">{{ item.title }}</a>
               <div class="snap">
-                {{ item.snap }}
+                <span>{{ item.snap }}</span>
               </div>
               <div class="info">
                 <span>{{ item.time }}</span>
@@ -30,7 +30,7 @@
 import Page from "@components/page/Page.vue";
 import { ref } from "vue";
 const arr = ref<any>({
-  '2021': [
+  '2020': [
     {
       id: 1,
       number: 21,
@@ -38,7 +38,7 @@ const arr = ref<any>({
       background: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F17%2F20161017225110_FXsRZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670570902&t=03d3449e62c1cc016f87f5e40aae5b97',
       snap: '我们邀请到了三位「本年度被裁员过」的群友，和他们一起在这个说冷不冷，说热也不热的深秋，聊聊这段特殊的经历，不制造焦虑，只想给有类似经历的朋友一点儿慰籍 35 条评论',
       time: '10月12日',
-      tags: ['职业发展', '创业', 'body', '访谈']
+      tags: ['职业发展', '创业', 'body', '访谈'],
     },{
       id: 2,
       number: 22,
@@ -58,7 +58,42 @@ const arr = ref<any>({
     },{
       id: 4,
       number: 24,
+      title: '我们得收集信仰，让信徒信仰太阳',
+      background: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F17%2F20161017225110_FXsRZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670570902&t=03d3449e62c1cc016f87f5e40aae5b97',
+      snap: '我们邀请到了三位「本年度被裁员过」的群友，和他们一起在这个说冷不冷，说热也不热的深秋，聊聊这段特殊的经历，不制造焦虑，只想给有类似经历的朋友一点儿慰籍 35 条评论',
+      time: '10月12日',
+      tags: ['职业发展', '创业', 'body', '访谈']
+    }
+  ],
+  '2021': [
+    {
+      id: 1,
+      number: 21,
       title: '和创业中的前 Adobe XD 设计师聊聊 Figma 收购案',
+      background: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F17%2F20161017225110_FXsRZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670570902&t=03d3449e62c1cc016f87f5e40aae5b97',
+      snap: '我们邀请到了三位「本年度被裁员过」的群友，和他们一起在这个说冷不冷，说热也不热的深秋，聊聊这段特殊的经历，不制造焦虑，只想给有类似经历的朋友一点儿慰籍 35 条评论',
+      time: '10月12日',
+      tags: ['职业发展', '创业', 'body', '访谈'],
+    },{
+      id: 2,
+      number: 22,
+      title: '和创业中的前 Adobe XD 设计师聊聊 Figma 收购案',
+      background: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F17%2F20161017225110_FXsRZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670570902&t=03d3449e62c1cc016f87f5e40aae5b97',
+      snap: '我们邀请到了三位「本年度被裁员过」的群友，和他们一起在这个说冷不冷，说热也不热的深秋，聊聊这段特殊的经历，不制造焦虑，只想给有类似经历的朋友一点儿慰籍 35 条评论',
+      time: '10月12日',
+      tags: ['职业发展', '创业', 'body', '访谈']
+    },{
+      id: 3,
+      number: 23,
+      title: '和创业中的前 Adobe XD 设计师聊聊 Figma 收购案',
+      background: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F17%2F20161017225110_FXsRZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670570902&t=03d3449e62c1cc016f87f5e40aae5b97',
+      snap: '我们邀请到了三位「本年度被裁员过」的群友，和他们一起在这个说冷不冷，说热也不热的深秋，聊聊这段特殊的经历，不制造焦虑，只想给有类似经历的朋友一点儿慰籍 35 条评论',
+      time: '10月12日',
+      tags: ['职业发展', '创业', 'body', '访谈']
+    },{
+      id: 4,
+      number: 24,
+      title: '我们得收集信仰，让信徒',
       background: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F17%2F20161017225110_FXsRZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670570902&t=03d3449e62c1cc016f87f5e40aae5b97',
       snap: '我们邀请到了三位「本年度被裁员过」的群友，和他们一起在这个说冷不冷，说热也不热的深秋，聊聊这段特殊的经历，不制造焦虑，只想给有类似经历的朋友一点儿慰籍 35 条评论',
       time: '10月12日',
