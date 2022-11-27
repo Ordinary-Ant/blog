@@ -72,7 +72,6 @@ section {
       }
       .title {
         font-size: 16px;
-        text-indent: 2px;
         padding: 5px;
         border-radius: 5px;
         transition: all .5s;

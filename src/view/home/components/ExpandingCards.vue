@@ -92,7 +92,6 @@ const handleChangeActive = (active_id: string) => {
       }
     }
     .card-content {
-      text-indent: 2px;
       font-size: 14px;
       color: #fff;
       background-repeat: no-repeat;

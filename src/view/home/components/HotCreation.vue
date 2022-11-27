@@ -1,13 +1,24 @@
 <template>
   <HotCard title="出色_作品">
     <div class="hot-creation">
-      <ExpandingCards :cards_list="list"/>
+      <div class="master-creation">
+        <div class="blur-img">
+          <img :src="master_crea.img" alt="" />
+        </div>
+      </div>
+      <div class="more-creation">
+        <div v-for="item in more_list" :key="item.id">
+          <div class="blur-img">
+            <img :src="master_crea.img" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   </HotCard>
 </template>
 <script lang="ts" setup>
 import HotCard from "./HotCard.vue";
-import ExpandingCards from "./ExpandingCards.vue";
+import { computed } from "vue";
 
 const list = [{
   id: '1',
@@ -50,16 +61,24 @@ const list = [{
   category: '前端'
 }]
 
+const master_crea = computed(() => {
+  return list[0]
+})
+
+const more_list = computed(() => {
+  return list.slice(1)
+})
+
 </script>
 
 <style lang="scss" scoped>
 .hot-creation {
-  .el-carousel__item {
-    border-radius: 5px;
-    overflow: hidden;
-    .el-image {
-      border-radius: 5px;
-    }
+  display: flex;
+  .master-creation {
+    flex: 2
+  }
+  .more-creation {
+    flex: 1;
   }
 }
 </style>

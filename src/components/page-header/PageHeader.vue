@@ -25,7 +25,6 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  text-indent: 3px;
   color: #ccc;
   .title {
     font-size: 36px;
