@@ -1,13 +1,13 @@
 <template>
-  <div class="logo" @click="$router.push('/')">123</div>
+  <div class="mt-12 h-auto" @click="$router.push('/')">
+    <img :src="src" class="object-cover rounded" @error="handleError" />
+  </div>
 </template>
-  
-<script setup lang="ts">
+<script setup>
+import { ref } from "vue";
+import default_src from "@assets/images/default-logo.webp";
+import useImgError from "@hooks/useImgError";
+
+const src = ref("");
+const { handleError } = useImgError(default_src);
 </script>
-  
-<style lang="scss" scoped>
-.logo {
-  margin-top: 48px;
-}
-</style>
-  

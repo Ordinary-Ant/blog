@@ -1,7 +1,7 @@
 <template>
-  <div class="nav-list">
-    <nav :class="['nav-item', nav.path === $route.path && 'active']" v-for="nav in nav_path" :key="nav.id"
-      @click="navTo(nav.path)">
+  <div class="flex flex-col justify-center items-center text-lg font-bold">
+    <nav class="my-4 w-full cursor-pointer transition-all pb-4 relative" :class="nav.path === $route.path && 'active'"
+      v-for="nav in nav_path" :key="nav.id" @click="navTo(nav.path)">
       {{ nav.name }}
     </nav>
   </div>
@@ -15,25 +15,24 @@ const { navTo } = useNav();
 </script>
 
 <style lang="scss" scoped>
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  .nav-item {
-    margin: 12px 0;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.5s;
-    padding: 10px 15px;
-    &:hover {
-      background: black;
-    }
-    &.active {
-      background: black;
-    }
+nav {
+  &::before {
+    content: '->';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--navColor);
+    display: none;
   }
 
+  &:hover,
+  &.active {
+    color: var(--navColor);
+    transform: translateX(-1rem);
+
+    &::before {
+      display: block;
+    }
+  }
 }
 </style>

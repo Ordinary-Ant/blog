@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Aside: typeof import('./src/components/aside/Aside.vue')['default']
+    ComImage: typeof import('./src/components/comImage/ComImage.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElCard: typeof import('element-plus/es')['ElCard']
@@ -20,6 +21,7 @@ declare module '@vue/runtime-core' {
     Logo: typeof import('./src/components/header/components/Logo.vue')['default']
     Main: typeof import('./src/components/main/Main.vue')['default']
     MasterPage: typeof import('./src/components/page/MasterPage.vue')['default']
+    MdViewer: typeof import('./src/components/mdViewer/MdViewer.vue')['default']
     Nav: typeof import('./src/components/header/components/Nav.vue')['default']
     Page: typeof import('./src/components/page/Page.vue')['default']
     PageAside: typeof import('./src/components/page-aside/PageAside.vue')['default']

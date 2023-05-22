@@ -6,6 +6,7 @@ const Comments = () => import('@view/comments/index.vue')
 const Creation = () => import('@view/creation/index.vue')
 const History = () => import('@view/history/index.vue')
 const Jottings = () => import('@view/jottings/index.vue')
+const Detail = () => import('@view/detail/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -43,6 +44,12 @@ const routes: Array<RouteRecordRaw> = [
     name: '闪念',
     component: Jottings,
     meta: { es_name: 'Jottings' }
+  },
+  {
+    path: '/detail/:id',
+    name: '详情',
+    component: Detail,
+    meta: { es_name: 'Detail' }
   }
 ]
 

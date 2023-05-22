@@ -1,21 +1,16 @@
 <template>
-  <main id="main">
+  <main id="main" class="w-5/6 fixed right-0 box-border overflow-auto transition-all h-full">
     <slot></slot>
+    <Footer />
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Footer from '@components/footer/Footer.vue'
+</script>
 
 <style lang="scss" scoped>
 main {
-  width: 83.8vw;
-  height: 100%;
-  position: fixed;
-  right: 0;
-  box-sizing: border-box;
-  overflow: auto;
-  transition: all 0.5s;
-  margin: 12px 12px 12px 0;
   scrollbar-width: none; 
   -ms-overflow-style: none;
   &::-webkit-scrollbar {

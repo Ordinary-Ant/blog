@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-size: 14px;
+  --font-color: #192d42;
+  --boxBgColor: #fff;
+  --boxBgBorderColor: #36d2d6;
+  --borderColor: #00d6e3;
+  --boxBgWidth: 0.75rem;
+  --navColor: #00d6e3;
+  
+  --defaultBorderColor: #ddd;
+  --tagTextColor: #ccc;
+
+  --titleTextColor: #fff;
+  --titleTextColorAsh: #595959;
+  --pattern-bg: radial-gradient(#e9e9e9 .75px, #fff .75px);
+}
+
+html {
+  font-size: var(--font-size);
+  color: var(--font-color);
+}
+.min-width-240 {
+  min-width: 17.1429rem;
+}
+.border-default-color {
+  border-color: var(--defaultBorderColor);
+}
+.background-color {
+  background: var(--borderColor);
+}
+.tag-text-color {
+  color: var(--tagTextColor);
+}
+.cate-text-color {
+  color: var(--navColor);
+}
+.title-color-ash {
+  color: var(--titleTextColorAsh);
+}
+.title-text-color {
+  color: var(--titleTextColor);
+}

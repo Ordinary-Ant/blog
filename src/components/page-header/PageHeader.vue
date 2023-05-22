@@ -1,44 +1,13 @@
 <template>
-  <div class="page-header-container">
-    <div class="title">
+  <div
+    class="tag-text-color w-full box-border pb-8 transition-all flex flex-col justify-center items-start"
+  >
+    <div class="text-4xl flex items-center mb-4">
       Blog.{{ $route.meta.es_name }}
-      <span class="interval"></span>
+      <span class="block mx-4 w-4 h-4 background-color"></span>
       {{ $route.name }}
-    </div>
-    <div class="screen" v-if="$route.path == '/article'">
-      <span>排列顺序</span>
-      <span>浏览模式</span>
     </div>
   </div>
 </template>
-    
-<script setup lang="ts">
-</script>
-    
-<style lang="scss" scoped>
-.page-header-container {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 0 30px 60px;
-  transition: all 0.5s;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  color: #ccc;
-  .title {
-    font-size: 36px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  .interval {
-    display: block;
-    margin: 0 10px;
-    width: 12px;
-    height: 12px;
-    background: skyblue;
-  }
-}
-</style>
-    
+
+<script setup lang="ts"></script>

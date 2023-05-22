@@ -1,79 +1,63 @@
 <template>
-  <div class="avator" v-if="user_login_type">
-    <div @click="handleChangeStatus" class="header-option">搜索本站</div>
-    <el-popover 
-      popper-class="avator_pop"
-      placement="bottom" 
-      trigger="hover" 
-      width="220px" 
-      :offset="5"
-      :show-arrow="false" 
-      :teleported="false"
-    >
-      <div class="info">
-        <div class="setting">
-          <span>{{ user_name }}</span><button>设</button>
+  <div class="my-12 flex flex-col items-center">
+    <el-popover placement="right" trigger="hover" width="auto">
+      <div class="flex flex-col bg-slate-200 p-2">
+        <div class="p-2">
+          <span class="px-2 py-1 bg-black rounded text-orange-300">{{
+            user_info.name
+          }}</span>
+          <span class="ml-2">{{ user_info.job }}</span>
         </div>
-        <div class="vip">
-          <span>加入会员，尊享 0 大特权</span><button>立即购买</button>
-        </div>
+        <div class="p-2">love {{ user_info.hobby.join(" ") }}</div>
+        <ul class="p-2 flex justify-between items-center">
+          <li
+            class="w-10 h-10 rounded-full cursor-pointer shadow-lg"
+            :class="i"
+            v-for="i in user_info.links"
+          >
+            {{ use }}
+          </li>
+        </ul>
       </div>
-      <ul class="select">
-        <li v-for="i in 4">{{ i }}</li>
-      </ul>
       <template #reference>
-        <el-avatar shape="square" :src="squareUrl" />
+        <div class="flex items-center">
+          <el-avatar
+            class="align-middle rounded shadow-md"
+            shape="square"
+            :src="default_avator"
+          />
+          <span class="ml-2 mt-1 text-slate-600">@关于我</span>
+        </div>
       </template>
     </el-popover>
   </div>
 </template>
 
-<script setup lang="ts">
-import squareUrl from "@assets/vue.svg";
-import { ref } from "vue";
+<script setup>
+import default_avator from "@assets/images/default_avator.jpg";
+import { ref, computed } from "vue";
 import { useUserStore } from "@/store/user";
 
-const user_login_type = true;
-const user_name = ref<string>('子舟')
+const user_store = useUserStore();
 
-const user = useUserStore()
-const handleChangeStatus = () :void => {
-  user.setShowSearch(!user.show_search)
-}
+user_store.getCommon();
+
+const user_info = computed(() => {
+  return user_store.user;
+});
+
 </script>
 
 <style lang="scss" scoped>
-.avator {
-  margin-top: 48px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  .header-option {
-    margin-bottom: 12px;
-  }
-  :deep() .avator_pop {
-    padding: 0 !important;
-  }
-  .info {
-    padding: 10px;
-  }
-  .setting, .vip {
-    display: flex;
-    justify-content: space-between;
-  }
-  .vip {
-    font-size: 12px;
-    color: #ccc;
-  }
-  .select {
-    background: #ccc;
-    li {
-      padding: 5px 5px 5px 20px;
-    }
-  }
-  .header-option {
+.wechat {
+  background: green;
+}
 
-  }
+.qqtelp {
+  background: blue;
+}
+
+.github {
+  background: purple;
 }
 </style>
