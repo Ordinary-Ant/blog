@@ -2,12 +2,18 @@
   <div class="px-16 pt-24">
     <div class="bg-title-pic w-full h-96 bg-cover rounded-md"></div>
     <span class="text-4xl font-bold border-b inline-block border-dotted border-default-color my-6">测试markdown渲染效果，冲冲冲</span>
-    <div class="bg-detail px-4">
-      <MdViewer :value="test" />
+    <div class="flex w-full">
+      <div class="px-2 w-2/3">
+        <MdViewer :value="test" />
+      </div>
+      <div class="w-1/3 box-border pl-4 pt-4 border-l border-dotted border-default-color">
+        <Propose :is_comment="false"/>
+      </div>
     </div>
   </div>
 </template>
 <script setup>
+import Propose from '@components/propose/Propose.vue';
 import MdViewer from "@components/mdViewer/MdViewer.vue";
 import axios from "axios";
 import { ref, onMounted } from "vue";
@@ -29,10 +35,6 @@ onMounted(async () => {
 });
 </script>
 <style lang="scss" scoped>
-.bg-detail {
-  background-image: var(--pattern-bg);
-  background-size: calc(0.75px / 0.25) calc(0.75px * 4);
-}
 .bg-title-pic {
     background-image: url('/src/assets/images/default-logo.webp');
 }

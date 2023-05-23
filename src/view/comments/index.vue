@@ -1,5 +1,8 @@
 <template>
   <Page>
+    <!-- input -->
+    <Propose is_comment/>
+    <!-- list -->
     <div class="flex flex-wrap justify-between relative">
       <div
         class="order-none comment py-4 border-t border-dotted border-default-color"
@@ -37,6 +40,7 @@
 
 <script setup>
 import Page from "@components/page/Page.vue";
+import Propose from '.@components/propose/Propose.vue';
 import { ref } from "vue";
 
 const arr = ref([

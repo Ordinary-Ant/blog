@@ -28,6 +28,7 @@ declare module '@vue/runtime-core' {
     PageHeader: typeof import('./src/components/page-header/PageHeader.vue')['default']
     PageSearch: typeof import('./src/components/page-search/PageSearch.vue')['default']
     PageSidebar: typeof import('./src/components/page-sidebar/PageSidebar.vue')['default']
+    Propose: typeof import('./src/components/propose/Propose.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     User: typeof import('./src/components/header/components/User.vue')['default']
